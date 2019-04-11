@@ -1,0 +1,24 @@
+Documentación General para el Curso:
+------------------------------------
+
+INTALACION DE ANGULAR
+    Pasos previos
+        Instalar Node
+            - Se descarga de su página oficial y se instala en Windows de forma normal
+            - De forma predeterminada, al instalar node.js tambien se instala NPM (Gestor de paquetes de node)
+        Instalar Angular CLI
+            - Se instala el CLI de angular de forma global
+                $> npm install -g @angular/cli@latest
+PLANTILLA DE PROYECTO
+    La carpeta s1_project_template contiene los archivos de un proyecto angular vacio, que sirve como punto de partida de cualquier proyecto.
+    Además de los archivos necesarios (los mismos que estarían al crear un proyecto con 'ng new') se ha añadido Bootstrap version 3 para facilitar el maquetado
+    Partiendo de este proyecto, es necesario instalar las dependencias para crear la carpeta node-modules mediante:
+        $> npm install
+
+CREACION DE UN PROYECTO NUEVO
+    Angular creará una nueva carpeta en la que instalará todo lo necesario con el mismo nombre que el proyecto
+        $> ng new <project_name>
+        Ejemplo: $> ng new my-first-app
+
+
+
