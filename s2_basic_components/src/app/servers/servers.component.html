@@ -1,6 +1,13 @@
-<app-server>
-
-</app-server>
-<app-server>
-  
-</app-server>
+<div class="row">
+    <div class="col-md-12">
+        <button 
+            class="btn btn-primary"
+            [disabled] = "!serversAllowed"> <!--Here can be any TypeScript expresion or method call-->
+            Add New Server
+        </button>
+    </div>
+    <div class="col-md-12">
+        <app-server></app-server>
+        <app-server></app-server>
+    </div>
+</div>
