@@ -9,5 +9,16 @@ import { Component } from '@angular/core';
 })
 
 export class ServerComponent {
-
+    private serverId: number;
+    private serverStatus: string;
+    constructor () {
+        this.serverId = 10;
+        this.serverStatus = 'offline';
+    }
+    public getServerId () {
+        return this.serverId;
+    }
+    public getServerStatus () {
+        return this.serverStatus;
+    }
 }
