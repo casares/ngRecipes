@@ -6,23 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  private serversAllowed: boolean;
+  private serversAllowed = false;
+  private serverCreationStatus = 'Server not created';
+  private serverName = '';
+
   constructor() {
-    this.serversAllowed = false;
     setTimeout(() => {
-      this.toggleAllowStatus();
+      this.serversAllowed = true;
     }, 3000);
   }
 
-  public toggleAllowStatus () {
-    if (this.serversAllowed) {
-      this.serversAllowed = false;
-    } else {
-      this.serversAllowed = true;
-    }
+  public onServerCreation () {
+    this.serverCreationStatus = 'Server Created';
   }
-  public getAllowedStatus () {
-    return this.getAllowedStatus;
+
+  public onUpdateServerName (event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
   ngOnInit() {
   }

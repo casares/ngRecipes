@@ -1,13 +1,22 @@
-<div class="row">
-    <div class="col-md-12">
-        <button 
-            class="btn btn-primary"
-            [disabled] = "!serversAllowed"> <!--Here can be any TypeScript expresion or method call-->
-            Add New Server
-        </button>
-    </div>
-    <div class="col-md-12">
-        <app-server></app-server>
-        <app-server></app-server>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <label for="inputServer">Server Name</label>
+            <input type="text" name="inputServer" class="form-control"
+            (input)="onUpdateServerName($event)">
+            <button 
+                class="btn btn-primary"
+                [disabled] = "!serversAllowed"
+                (click)="onServerCreation()"
+                > <!-- [] or () = "" <- Here can be any TypeScript expresion or method call-->
+                Add New Server
+            </button>
+            <p>{{serverCreationStatus}}</p>
+            <p>{{serverName}}</p>
+        </div>
+        <div class="col-sm">
+            <app-server></app-server>
+            <app-server></app-server>
+        </div>
     </div>
 </div>
