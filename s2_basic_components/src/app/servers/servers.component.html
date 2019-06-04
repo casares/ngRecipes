@@ -3,12 +3,12 @@
         <div class="col-sm">
             <label for="inputServer">Server Name</label>
             <input type="text" name="inputServer" class="form-control"
-            (input)="onUpdateServerName($event)">
+            (input)="onUpdateServerName($event)"
+            [(ngModel)] = "serverName">
             <button 
                 class="btn btn-primary"
                 [disabled] = "!serversAllowed"
-                (click)="onServerCreation()"
-                > <!-- [] or () = "" <- Here can be any TypeScript expresion or method call-->
+                (click)= "onServerCreation()">
                 Add New Server
             </button>
             <p>{{serverCreationStatus}}</p>
