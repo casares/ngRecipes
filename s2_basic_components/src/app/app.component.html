@@ -23,7 +23,7 @@
 
       <p class="times" 
         *ngFor="let time of clickTimes; let i = index"
-        [ngStyle]="{'background-color' : getBgColor(i)}"
+        [ngStyle]="{'background-color' : getBgColor()}" <!-- This aproach does not work properly-->
         [ngClass]="{whiteText : getTextColor(i)}">
           {{time}}
       </p>    

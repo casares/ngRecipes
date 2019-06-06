@@ -14,8 +14,10 @@ export class AppComponent {
     this.clickTimes.push(Date.now().toString());
   }
 
-  public getBgColor (index: number) {
-    return index >= (5 - 1) ? 'blue' : 'transparent';
+  public getBgColor () { /*This aproach does not work properly*/
+    const bgColor = this.clickTimes.length >= 5 ? 'blue' : 'transparent';
+    console.log('El color devuelto es: ' + bgColor);
+    return bgColor;
   }
 
   public getTextColor ( index: number) {
