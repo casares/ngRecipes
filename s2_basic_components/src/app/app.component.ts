@@ -13,4 +13,12 @@ export class AppComponent {
     this.paragraphToggle = !this.paragraphToggle;
     this.clickTimes.push(Date.now().toString());
   }
+
+  public getBgColor (index: number) {
+    return index >= (5 - 1) ? 'blue' : 'transparent';
+  }
+
+  public getTextColor ( index: number) {
+    return index >= 5 - 1;
+  }
 }
