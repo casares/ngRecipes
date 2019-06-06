@@ -11,6 +11,6 @@ export class AppComponent {
 
   public onToggleDetails () {
     this.paragraphToggle = !this.paragraphToggle;
-    this.clickTimes.push(this.clickTimes.length + 1);
+    this.clickTimes.push(Date.now().toString());
   }
 }

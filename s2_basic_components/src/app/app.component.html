@@ -22,9 +22,9 @@
       <span *ngIf="paragraphToggle">Anything of my choice</span>
 
       <p class="times" 
-        *ngFor="let time of clickTimes"
-        [ngStyle]="{'background-color' : time >= 5 ? 'blue' : 'transparent'}"
-        [ngClass]="{whiteText : time >=5}">
+        *ngFor="let time of clickTimes; let i = index"
+        [ngStyle]="{'background-color' : i >= 5-1 ? 'blue' : 'transparent'}"
+        [ngClass]="{whiteText : i >=5-1}">
           {{time}}
       </p>    
     </div>
