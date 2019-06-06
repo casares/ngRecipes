@@ -11,4 +11,23 @@
           </div>
         </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Section 2. Task 3</h3>
+      <button class="btn btn-primary"
+        (click) = "onToggleDetails()">
+        Display Details
+      </button>
+      <span *ngIf="paragraphToggle">Anything of my choice</span>
+
+      <p class="times" 
+        *ngFor="let time of clickTimes"
+        [ngStyle]="{'background-color' : time >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{whiteText : time >=5}">
+          {{time}}
+      </p>    
+    </div>
+  </div>
+</div>
 
