@@ -11,8 +11,10 @@
                 (click)= "onServerCreation()">
                 Add New Server
             </button>
-            <p>{{serverCreationStatus}}</p>
-            <p>{{serverName}}</p>
+            <p *ngIf="serverCreated; else noServerCreated">Server status : {{serverCreationStatus}}. Server Name {{serverName}}</p>
+            <ng-template #noServerCreated>
+                <p>{{serverCreationStatus}}</p>
+            </ng-template>
         </div>
         <div class="col-sm">
             <app-server></app-server>
