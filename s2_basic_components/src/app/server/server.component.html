@@ -3,4 +3,9 @@
 <!--A hardcoded string-->
 <!--Method called returning a number-->
 <!--Property Component string type-->
-<p>The {{'Server'}} with ID: {{getServerId()}} is now {{serverStatus}}</p>
+<!-- <p>The {{'Server'}} with ID: {{getServerId()}} is now {{serverStatus}}</p> -->
+<p 
+    [ngStyle] = "{'background-color': getServerColor()}"
+    [ngClass] = "{online : getServerStatus() === 'online'}">
+    The {{'Server'}} with ID: {{getServerId()}} is now {{serverStatus}}
+</p>
