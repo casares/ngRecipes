@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    min-width: 100vh;
+}
+.encabezado{
+    text-align: center;
+    background-color: gray;
+    font-weight: bold;
+    color: #CCC;
+    margin: 0 auto;
+    padding: 1em;
+}

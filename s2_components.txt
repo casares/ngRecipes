@@ -1,0 +1,35 @@
+Curso UDEMY de Angular 7
+------------------------
+
+COMPONENTES
+    Creacion de un componente nuevo
+        Manualmente
+            Vamos a crear un componente llamado "server"
+            Creamos la carpeta: src/app/server
+            Y dentro de ésta, creamos los archivos necesarios para el componente
+                server.component.ts (funcionalidad)
+                    import {Component} from '@angular/core';
+                    @Component({
+                        selector: 'app-server',                   -> selector único donde se insertará la plantilla
+                        templateUrl: './server.component.html',   -> ruta de la plantilla del propio componente
+                        styleUrls: ['./server.component.css']     -> ruta de las hojas de estilo del componente (pueden ser varias si se desea)
+                    })
+                    export class Component_nameComponent {        -> la clase typescript que representa al componente
+
+                    }
+                server.component.hmtl (plantilla html)
+                server.component.css (estilos de css)
+                server.component.spec.ts (especificaciones para tests)
+            Añadir el componente a la aplicacion
+                En el archivo src/app.module.ts 
+                    Importamos el componente
+                        import { ServerComponent } from './server/server.component'   -> no hace falta la extension .ts
+                    Añadimos el componente en el decorador @NgModule en el array "declarations"
+                        @NgModule({
+                            declarations : [
+                                ....
+                                ServerComponent
+                            ]
+                        })
+            
+        CLI
